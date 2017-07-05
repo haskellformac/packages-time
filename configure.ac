@@ -16,7 +16,8 @@ AC_CONFIG_HEADERS([lib/include/HsTimeConfig.h])
 AC_CHECK_HEADERS([time.h])
 AC_CHECK_FUNCS([gmtime_r localtime_r])
 
-AC_CHECK_FUNCS([clock_gettime])
+# Removed to support building for macOS 10.11 on 10.12
+# AC_CHECK_FUNCS([clock_gettime])
 
 AC_STRUCT_TM
 AC_STRUCT_TIMEZONE
